@@ -5,6 +5,7 @@
   <summary>:x: calls a nonexistent method</summary>
   <blockquote>
     
+
 ```
 nonexistentMethod is not defined
 ```
@@ -35,12 +36,13 @@ TestContext.<anonymous> (file://test/resources/sample-tests/broken.test.js:5:3)
   <summary>:x: fails</summary>
   <blockquote>
     
+
 ```
 Expected values to be strictly equal:
 
 1 !== 2
-```
 
+```
 
 Stack:
 ```
@@ -68,4 +70,4 @@ Stack:
   </blockquote>
 </details>
   </blockquote>
-</details>
+</details>]
