@@ -5,7 +5,6 @@
   <summary>:x: calls a nonexistent method</summary>
   <blockquote>
     
-    
 ```
 nonexistentMethod is not defined
 ```
