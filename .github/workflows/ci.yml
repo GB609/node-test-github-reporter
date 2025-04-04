@@ -2,7 +2,9 @@ name: Continuous Integration
 
 on: 
   push:
-   branches: ['fix-tests']
+   branches:
+    - master
+  pull_request:
 
 jobs:
   test:
@@ -15,5 +17,15 @@ jobs:
           node-version-file: '.nvmrc'
       - run: |
           npm ci
-          npm run lint || echo 'FAILED'
+          npm run lint
           npm test
+
+  automerge:
+    name: Merge dependabot's PRs
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v3
