@@ -15,6 +15,7 @@ node --test --test-reporter ./index.js ./test/resources/sample-tests || true
 # Compare with expected results
 report=$(cat $GITHUB_STEP_SUMMARY)
 expected=$(cat ./test/resources/expected.md)
-diff <(remove_variables "$report") <(remove_variables "$expected")
 
-echo -e "\nACTUAL:\n[$report]\n----\nEXPECTED:\n[$expected]"
+echo -e "\nACTUAL:\n[$report]\n----\nEXPECTED:\n[$expected]" >&2
+
+diff <(remove_variables "$report") <(remove_variables "$expected")
