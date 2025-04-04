@@ -35,7 +35,6 @@ TestContext.<anonymous> (file://test/resources/sample-tests/broken.test.js:5:3)
   <summary>:x: fails</summary>
   <blockquote>
     
-    
 ```
 Expected values to be strictly equal:
 
